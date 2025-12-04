@@ -21,6 +21,13 @@
   --icon-secondary-filter: opacity(0.6);
 }
 
+a {
+  text-decoration: underline;          /* 开启下划线 */
+  text-decoration-thickness: 1px;      /* 线条弄细一点，不挡字 */
+  text-underline-offset: 3px;          /* 线条和字拉开一点距离，更透气 */
+  text-decoration-color: rgba(0,0,0,0.3); /* 线条颜色淡一点，不要喧宾夺主 */
+}
+
 body {
   background-color: var(--background-color);
   color: var(--foreground-color);
@@ -642,7 +649,7 @@ audio::-webkit-media-controls-panel {
   
   /* --- 布局与美化 --- */
   display: block;
-  margin: 20px auto;      /* 居中显示 */
+  margin: 20px 0;      /* 居左显示 */
   border-radius: 10px;    /* 圆角 */
   box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* 淡淡的阴影 */
   border: 1px solid rgba(0,0,0,0.05);      /* 极细的边框，增加精致感 */
