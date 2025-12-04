@@ -1,22 +1,24 @@
 :root {
-  --background-color: #f4f1ec;
-  --foreground-color: #000000;
-  --highlight-color: orangered;
-  --box-border-radius: 3px;
+ /* 核心配色 */
+  --background-color: #f5f7fa;       /* 极淡的蓝灰色背景 */
+  --foreground-color: #1f2937;       /* 深灰黑色文字，比纯黑柔和 */
+  --highlight-color: #2563eb;        /* 鲜亮的科技蓝 (链接颜色) */
+  --cell-background-color: #ffffff;  /* 卡片纯白 */
+  --secondary-color: #6b7280;        /* 次要文字灰色 */
+  
+  /* 其他保持微调 */
+  --box-border-radius: 6px;          /*稍微圆润一点*/
   --media-border-radius: 8px;
   --dot-size: 8px;
-  --shadows: 0 1px 2px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02),
-    0 4px 8px rgba(0, 0, 0, 0.02), 0 8px 16px rgba(0, 0, 0, 0.02);
+  --shadows: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.05);
   --box-margin: 10px;
   --border-color: rgba(0, 0, 0, 0.05);
   --link-color: var(--highlight-color);
-  --icon-hover-filter: invert(51%) sepia(0%) saturate(0%) hue-rotate(23deg)
-    brightness(90%) contrast(90%);
-  --icon-secondary-filter: invert(97%) sepia(0%) saturate(0%) hue-rotate(129deg)
-    brightness(86%) contrast(88%);
-  --cell-background-color: #fff;
-  --code-background-color: #f9f9f9;
-  --secondary-color: #999;
+  --code-background-color: #f1f5f9;
+  
+  /* 图标滤镜保持默认即可，或者删掉 */
+  --icon-hover-filter: brightness(0);
+  --icon-secondary-filter: opacity(0.6);
 }
 
 body {
