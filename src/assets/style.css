@@ -1,24 +1,25 @@
 :root {
- /* 核心配色 */
-  --background-color: #f5f7fa;       /* 极淡的蓝灰色背景 */
-  --foreground-color: #1f2937;       /* 深灰黑色文字，比纯黑柔和 */
-  --highlight-color: #2563eb;        /* 鲜亮的科技蓝 (链接颜色) */
+
+  /* 核心配色 */
+  --background-color: #f0fdf4;       /* 极淡的薄荷绿背景 */
+  --foreground-color: #14532d;       /* 深墨绿文字 */
+  --highlight-color: #16a34a;        /* 鲜艳的草绿色链接 */
   --cell-background-color: #ffffff;  /* 卡片纯白 */
-  --secondary-color: #6b7280;        /* 次要文字灰色 */
-  
-  /* 其他保持微调 */
-  --box-border-radius: 6px;          /*稍微圆润一点*/
+  --secondary-color: #65a30d;        /* 次要文字用橄榄绿 */
+
+  /* 保持原有结构 */
+  --box-border-radius: 3px;
   --media-border-radius: 8px;
   --dot-size: 8px;
-  --shadows: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadows: 0 2px 4px rgba(20, 83, 45, 0.05); /* 阴影带一点点绿 */
   --box-margin: 10px;
-  --border-color: rgba(0, 0, 0, 0.05);
+  --border-color: rgba(22, 163, 74, 0.1);
   --link-color: var(--highlight-color);
-  --code-background-color: #f1f5f9;
+  --code-background-color: #dcfce7;
   
-  /* 图标滤镜保持默认即可，或者删掉 */
-  --icon-hover-filter: brightness(0);
-  --icon-secondary-filter: opacity(0.6);
+  --icon-hover-filter: hue-rotate(90deg); 
+  --icon-secondary-filter: opacity(0.5);
+
 }
 
 body {
@@ -889,4 +890,18 @@ li:has(input[type='checkbox']:checked:disabled)::before {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+}
+
+/* 找到 img 标签或者是控制图片的类名，通常是 .content img 或 figure img */
+.content img, .description img {
+  border: none !important;           /* 1. 强制去掉原来的灰色边框 */
+  padding: 0 !important;             /* 2. 去掉尴尬的白边 */
+  border-radius: 12px;               /* 3. 更大的圆角，更现代 */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* 4. 关键：柔和的扩散投影 */
+  
+  /* 可选：防止图片过大撑破布局 */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0; /* 上下留出呼吸感 */
 }
