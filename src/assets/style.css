@@ -2,7 +2,7 @@
   /* 核心配色 */
   --background-color: #f5f7fa;       /* 极淡的蓝灰色背景 */
   --foreground-color: #1f2937;       /* 深灰黑色文字，比纯黑柔和 */
-  --highlight-color: #2563eb;        /* 鲜亮的科技蓝 (链接颜色) */
+  --highlight-color: #374151;  /* 是一种很深的暖灰色，不刺眼 */
   --cell-background-color: #ffffff;  /* 卡片纯白 */
   --secondary-color: #6b7280;        /* 次要文字灰色 */
   
@@ -634,20 +634,19 @@ audio::-webkit-media-controls-panel {
 
 
 .content img, .description img {
-  /* 1. 智能尺寸 */
-  max-height: 500px;      /* 高度封顶，防止竖图霸屏 */
-  width: auto;            /* 宽度自动适应高度 */
-  max-width: 100%;        /* 但宽度也不能超过容器 */
+  /* --- 核心修复 --- */
+  max-width: 320px;       /* 限制最大宽度，手机截图不会太大 */
+  width: 100%;            /* 宽度自适应 */
+  height: auto !important;/* 🌟 关键！保持原始比例，拒绝变形 */
+  object-fit: contain;    /* 双重保险，确保内容完整 */
   
-  /* 2. 布局 */
+  /* --- 布局与美化 --- */
   display: block;
-  margin: 20px auto;      /* 居中 */
-  
-  /* 3. 美化 */
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin: 20px auto;      /* 居中显示 */
+  border-radius: 10px;    /* 圆角 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* 淡淡的阴影 */
+  border: 1px solid rgba(0,0,0,0.05);      /* 极细的边框，增加精致感 */
 }
-
 
 
 .content a:link,
