@@ -1,13 +1,19 @@
 :root {
   /* 核心配色 */
-  --background-color: #f5f7fa;       /* 极淡的蓝灰色背景 */
-  --foreground-color: #1f2937;       /* 深灰黑色文字，比纯黑柔和 */
-  --highlight-color: #475569;  /* 蓝灰色，非常有质感 */
-  --cell-background-color: #ffffff;  /* 卡片纯白 */
-  --secondary-color: #6b7280;        /* 次要文字灰色 */
-  
+  --background-color: #f5f7fa;
+  /* 极淡的蓝灰色背景 */
+  --foreground-color: #1f2937;
+  /* 深灰黑色文字，比纯黑柔和 */
+  --highlight-color: #475569;
+  /* 蓝灰色，非常有质感 */
+  --cell-background-color: #ffffff;
+  /* 卡片纯白 */
+  --secondary-color: #6b7280;
+  /* 次要文字灰色 */
+
   /* 其他保持微调 */
-  --box-border-radius: 6px;          /*稍微圆润一点*/
+  --box-border-radius: 6px;
+  /*稍微圆润一点*/
   --media-border-radius: 8px;
   --dot-size: 8px;
   --shadows: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -15,17 +21,21 @@
   --border-color: rgba(0, 0, 0, 0.05);
   --link-color: var(--highlight-color);
   --code-background-color: #f1f5f9;
-  
+
   /* 图标滤镜保持默认即可，或者删掉 */
   --icon-hover-filter: brightness(0);
   --icon-secondary-filter: opacity(0.6);
 }
 
 a {
-  text-decoration: underline;          /* 开启下划线 */
-  text-decoration-thickness: 1px;      /* 线条弄细一点，不挡字 */
-  text-underline-offset: 3px;          /* 线条和字拉开一点距离，更透气 */
-  text-decoration-color: rgba(0,0,0,0.3); /* 线条颜色淡一点，不要喧宾夺主 */
+  text-decoration: underline;
+  /* 开启下划线 */
+  text-decoration-thickness: 1px;
+  /* 线条弄细一点，不挡字 */
+  text-underline-offset: 3px;
+  /* 线条和字拉开一点距离，更透气 */
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+  /* 线条颜色淡一点，不要喧宾夺主 */
 }
 
 body {
@@ -235,8 +245,7 @@ hr {
   margin-left: 28px;
 }
 
-.item {
-}
+.item {}
 
 .image-box,
 .video-box,
@@ -266,7 +275,7 @@ hr {
   box-shadow: var(--shadows);
 }
 
-.image-box > img {
+.image-box>img {
   display: block;
   width: calc(100% - 1px);
   height: auto;
@@ -352,14 +361,14 @@ audio::-webkit-media-controls-panel {
   align-items: center;
 }
 
-.time-box > .dot {
+.time-box>.dot {
   width: var(--dot-size);
   height: var(--dot-size);
   border-radius: var(--dot-size);
   background-color: var(--link-color);
 }
 
-.time-box > .time {
+.time-box>.time {
   flex: 1;
   color: var(--link-color);
   font-size: 14px;
@@ -385,8 +394,7 @@ audio::-webkit-media-controls-panel {
   margin-bottom: var(--box-margin);
 }
 
-.nav-icon {
-}
+.nav-icon {}
 
 .nav-link:link,
 .nav-link:visited {
@@ -640,19 +648,28 @@ audio::-webkit-media-controls-panel {
 }
 
 
-.content img, .description img {
+.content img,
+.description img {
   /* --- 核心修复 --- */
-  max-width: 320px;       /* 限制最大宽度，手机截图不会太大 */
-  width: 100%;            /* 宽度自适应 */
-  height: auto !important;/* 🌟 关键！保持原始比例，拒绝变形 */
-  object-fit: contain;    /* 双重保险，确保内容完整 */
-  
+  max-width: 320px;
+  /* 限制最大宽度，手机截图不会太大 */
+  width: 100%;
+  /* 宽度自适应 */
+  height: auto !important;
+  /* 🌟 关键！保持原始比例，拒绝变形 */
+  object-fit: contain;
+  /* 双重保险，确保内容完整 */
+
   /* --- 布局与美化 --- */
   display: block;
-  margin: 20px 0;      /* 居左显示 */
-  border-radius: 10px;    /* 圆角 */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* 淡淡的阴影 */
-  border: 1px solid rgba(0,0,0,0.05);      /* 极细的边框，增加精致感 */
+  margin: 20px 0;
+  /* 居左显示 */
+  border-radius: 10px;
+  /* 圆角 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* 淡淡的阴影 */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  /* 极细的边框，增加精致感 */
 }
 
 
@@ -685,7 +702,7 @@ audio::-webkit-media-controls-panel {
   font-size: 0.8em;
 }
 
-.content > iframe {
+.content>iframe {
   max-width: calc(100% - 1px);
   border-radius: var(--media-border-radius);
   border: 1px solid var(--border-color);
@@ -906,4 +923,3 @@ li:has(input[type='checkbox']:checked:disabled)::before {
     margin-bottom: 20px;
   }
 }
-
