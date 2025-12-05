@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /// <reference path="../.astro/types.d.ts" />
 /// <reference types="astro/client" />
 declare namespace App {
@@ -9,6 +10,8 @@ declare namespace App {
   }
 }
 =======
+=======
+>>>>>>> Stashed changes
 /// <reference path="../.astro/types.d.ts" />
 /// <reference types="astro/client" />
 declare namespace App {
@@ -17,5 +20,9 @@ declare namespace App {
     RSS_URL: string
     RSS_PREFIX: string
   }
+<<<<<<< Updated upstream
+}
+>>>>>>> Stashed changes
+=======
 }
 >>>>>>> Stashed changes

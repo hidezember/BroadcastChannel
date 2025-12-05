@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import * as cheerio from 'cheerio'
 import flourite from 'flourite'
 import { LRUCache } from 'lru-cache'
@@ -231,6 +232,8 @@ export async function getChannelInfo(Astro, { before = '', after = '', q = '', t
   return channelInfo
 }
 =======
+=======
+>>>>>>> Stashed changes
 import { $fetch } from 'ofetch'
 import * as cheerio from 'cheerio'
 import { LRUCache } from 'lru-cache'
@@ -462,4 +465,7 @@ export async function getChannelInfo(Astro, { before = '', after = '', q = '', t
   cache.set(cacheKey, channelInfo)
   return channelInfo
 }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

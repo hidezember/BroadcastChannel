@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import process from 'node:process'
 import cloudflare from '@astrojs/cloudflare'
 import netlify from '@astrojs/netlify'
@@ -89,6 +90,8 @@ export default defineConfig({
   },
 })
 =======
+=======
+>>>>>>> Stashed changes
 import process from 'node:process'
 import { defineConfig } from 'astro/config'
 import vercel from '@astrojs/vercel/serverless'
@@ -178,4 +181,7 @@ export default defineConfig({
     },
   },
 })
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
