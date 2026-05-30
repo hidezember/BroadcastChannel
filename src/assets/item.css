@@ -4,12 +4,40 @@
   .image-list-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: masonry;
+    gap: 3px;
+    border-radius: var(--media-border-radius);
+    overflow: hidden;
 
     &.image-list-odd {
       :first-child {
         grid-column: 1 / 3;
       }
+    }
+
+    /* 缩略图按钮：填满格子 */
+    .image-preview-wrap {
+      display: block;
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    /* 弹窗按钮不参与网格布局 */
+    > .modal,
+    > [popover] {
+      position: absolute;
+    }
+
+    /* 网格中的图片：仅多图（2+）时统一比例、裁切填充 */
+    &:has(.image-preview-wrap ~ .image-preview-wrap) .image-preview-wrap > img {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      width: 100%;
+      height: 100% !important;
+      max-width: none;
+      border-radius: 0;
+      margin: 0;
+      box-shadow: none;
+      border: none;
     }
   }
 
